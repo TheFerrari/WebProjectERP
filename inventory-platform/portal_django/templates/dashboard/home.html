@@ -1,0 +1,10 @@
+<!doctype html>
+<html><body>
+<h1>Inventory Portal Dashboard</h1>
+{% if error %}<p>Service warning: {{ error }}</p>{% endif %}
+<h3>Inventory Summary</h3>
+<ul>{% for row in inventory %}<li>{{ row.branch_name }} - {{ row.item_name }}: {{ row.quantity }}</li>{% empty %}<li>No data</li>{% endfor %}</ul>
+<h3>Recent Orders</h3>
+<ul>{% for o in orders %}<li>Order {{ o.id }} ({{ o.status }})</li>{% empty %}<li>No recent orders</li>{% endfor %}</ul>
+<a href="/accounts/logout/">Logout</a>
+</body></html>

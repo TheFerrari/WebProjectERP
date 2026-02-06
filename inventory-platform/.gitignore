@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+EOF && git add -A && git commit --amend -m "Scaffold hybrid Django/FastAPI inventory monorepo"
